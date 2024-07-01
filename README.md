@@ -20,7 +20,7 @@ Use mouse. Otherwise, you should know the drill ;)
 
 ## Media
 
-![Armageddon Gameplay](".media/armageddon-gameplay.gif")
+![Armageddon Gameplay](.media/armageddon-gameplay.gif)
 
 ## License
 

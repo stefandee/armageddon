@@ -1,0 +1,37 @@
+program links;
+uses graph,crt;
+type buf=array[1..2048] of byte;
+     sb=^buf;
+var gd,gm,rd:integer;
+    pass:sb;
+    fs,fd:file;
+begin
+new(pass);
+gd:=detect;
+initgraph(gd,gm,'c:\tp\bgi');
+assign(fd,'atomic.arm');
+new(pass);
+rewrite(fd,2048);
+assign(fs,'moush01.zpx');
+reset(fs,2048);
+blockread(fs,pass^,1,rd);
+putimage(0,0,pass^,0);
+blockwrite(fd,pass^,1,rd);
+readln;
+close(fs);
+assign(fs,'moush02.zpx');
+reset(fs,2048);
+blockread(fs,pass^,1,rd);
+putimage(0,0,pass^,0);
+blockwrite(fd,pass^,1,rd);
+readln;
+close(fs);
+assign(fs,'moush03.zpx');
+reset(fs,2048);
+blockread(fs,pass^,1,rd);
+putimage(0,0,pass^,0);
+blockwrite(fd,pass^,1,rd);
+readln;
+close(fs);
+close(fd);
+end.
